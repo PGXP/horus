@@ -12,7 +12,7 @@ import org.demoiselle.jee.configuration.annotation.Configuration;
  * @author PauloGladson
  */
 @Configuration(prefix = "demoiselle.horus")
-public class ApplicationConfig {
+public class HorusConfig {
 
     private String path;
 

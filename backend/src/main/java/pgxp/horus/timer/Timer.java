@@ -34,13 +34,13 @@ public class Timer {
     public void atSchedule1h() {
         List<Fingerprint> fps = (List<Fingerprint>) fingerprintDAO.find().getContent();
 
-         fps.stream().filter((fp) -> (fp.getCodigo().contains("send"))).map((fp) -> {
-             sender.send(fp.getCodigo().split("send/")[1], "Sistema atualizado");
-             return fp;
-         }).forEachOrdered((fp) -> {
-             fingerprintDAO.remove(fp.getId());
-             LOG.info(fp.getUsuario() + " apagado ");
-         });
+//         fps.stream().filter((fp) -> (fp.getCodigo().contains("send"))).map((fp) -> {
+//             sender.send(fp.getCodigo().split("send/")[1], "Sistema atualizado");
+//             return fp;
+//         }).forEachOrdered((fp) -> {
+//             fingerprintDAO.remove(fp.getId());
+//             LOG.info(fp.getUsuario() + " apagado ");
+//         });
     }
 
     /**
